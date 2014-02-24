@@ -213,3 +213,4 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+/Project_02/Vector3dApp/nbproject/private/
