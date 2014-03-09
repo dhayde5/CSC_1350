@@ -4,3 +4,5 @@
 *.jar
 *.war
 *.ear
+/Project_02/Vector3dApp/nbproject/private/
+/Project_02/Vector3dApp/build/

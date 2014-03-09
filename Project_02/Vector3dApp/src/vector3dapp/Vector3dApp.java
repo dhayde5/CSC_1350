@@ -8,7 +8,66 @@ public class Vector3dApp
 {
     public static void main(String[] args) 
     {
-        // TODO code application logic here
- }
+        // Create a scanner object
+        Scanner s = new Scanner(System.in);
+
+        // VECTOR 1 CONSTRUCTION
+        System.out.println("Enter the components of the first 3-d vector-> ");        
+        Vector3D vector1 = new Vector3D(s.nextDouble(), s.nextDouble(), s.nextDouble());
+        
+        // VECTOR 2 CONSTRUCTION
+        System.out.println("Enter the components of the second 3-d vector-> ");        
+        Vector3D vector2 = new Vector3D(s.nextDouble(), s.nextDouble(), s.nextDouble());
+        
+        // VECTOR 3 CONSTRUCTION
+        System.out.println("Enter the components of the third 3-d vector-> ");        
+        Vector3D vector3 = new Vector3D(s.nextDouble(), s.nextDouble(), s.nextDouble());
+        
+        // Print Vector 1
+        System.out.println("v1 = " + vector1.toString());
+        
+        // Print Vector 2
+        System.out.println("v2 = " + vector2.toString());
+        
+        // Print Vector 3
+        System.out.println("v3 = " + vector3.toString());
+        
+        // Compute and display v1 + v2
+        System.out.println("v1 + v2 = " + vector1.add(vector2).toString());
+        
+        // Compute and display (v2 + v3) * v1
+        System.out.printf("(v2 + v3) * v1 = %.6f\n",
+                vector1.iProduct(vector2.add(vector3)));
+        
+        // Compute and display v1 X (v2 - v3)
+        System.out.printf("v1 x (v2 - v3) = %s\n",
+                vector1.xProduct(vector2.subtract(vector3)).toString());
+        
+        // Compute and display (v2 - v3) X v1
+        System.out.printf("(v2 - v3) X v1 = %s\n",
+                vector2.subtract(vector3).xProduct(vector1).toString());
+        
+        // Compute and display |v1 X v2| and |v2| |v1|
+        System.out.printf("|v1 x v2| = %.6f and |v2||v1| = %.6f\n",
+                vector1.xProduct(vector2).length(), 
+                vector2.length() * vector1.length()
+                );
+        
+        // Compute and display (v1 x v2) / (|v1 x v2|)
+        System.out.printf("(v1 x v2) / (|v1 x v2|) = %.6f\n",
+                vector1.xProduct(vector2).length() / 
+                        (vector2.length() * vector1.length()));
+        
+        // Compute and display v1 x (v2 + v3)
+        System.out.printf("v1 x (v2 + v3) = %s\n",
+                vector1.xProduct(vector2.add(vector3)).toString());
+        
+        // Compute and display (v1 x v2) + (v1 x v3)
+        System.out.printf("(v1 x v2) + (v1 x v3) = %s\n",
+                vector1.xProduct(vector2).add(vector1.xProduct(vector3)).toString());
+        
+        
+        
+    }
     
 }
