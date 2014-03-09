@@ -4,7 +4,7 @@ package vector3dapp;
 * @file Vector3D.java
 * @author Dustin Hayden
 * @date 03-09-2014
-* Description: provides for a representation of a 3D vector and it's methods.
+* Description: Provides for a representation of a 3D vector and its methods.
 * Course: CSC1350 Section 1
 * pawsID: dhayde5
 * Project #: 2

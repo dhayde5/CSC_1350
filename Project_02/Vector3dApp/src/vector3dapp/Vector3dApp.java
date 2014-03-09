@@ -18,15 +18,15 @@ public class Vector3dApp
         Scanner s = new Scanner(System.in);
 
         // VECTOR 1 CONSTRUCTION
-        System.out.println("Enter the components of the first 3-d vector-> ");        
+        System.out.print("Enter the components of the first 3-d vector-> ");        
         Vector3D vector1 = new Vector3D(s.nextDouble(), s.nextDouble(), s.nextDouble());
         
         // VECTOR 2 CONSTRUCTION
-        System.out.println("Enter the components of the second 3-d vector-> ");        
+        System.out.print("Enter the components of the second 3-d vector-> ");        
         Vector3D vector2 = new Vector3D(s.nextDouble(), s.nextDouble(), s.nextDouble());
         
         // VECTOR 3 CONSTRUCTION
-        System.out.println("Enter the components of the third 3-d vector-> ");        
+        System.out.print("Enter the components of the third 3-d vector-> ");        
         Vector3D vector3 = new Vector3D(s.nextDouble(), s.nextDouble(), s.nextDouble());
         
         // Print Vector 1
