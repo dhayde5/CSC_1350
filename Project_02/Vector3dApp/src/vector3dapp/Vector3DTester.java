@@ -10,7 +10,11 @@ import java.util.Scanner;
 * Project #: 2
 * Instructor: Dr. Duncan
 */
-public class Vector3dApp 
+
+/**
+ * client program to test the Vector3D class.
+ */
+public class Vector3DTester 
 {
     /**
      * @param args the command line arguments
