@@ -3,6 +3,16 @@ package vector3dapp;
 /**
  *
  * @author dhayde5
+ * file: Vector3D.java
+ * purpose: describes a 3D vector
+ * date: March 9, 2014
+ * course: CSC 1350, Section 01
+ * 
+ * @version 1.0
+ */
+
+/**
+ * provides for a representation of a 3D vector and it's methods.
  */
 public class Vector3D 
 {
@@ -123,12 +133,11 @@ public class Vector3D
         return diff;
     }
     
-    //  Gives a string representation of this vector in the format <x,y,z> 
-    //where x, y, and z are the first, second and third components of this 3D vector. 
+    //*  Gives a string representation of this vector in the format <x,y,z>
+     */where x, y, and z are the first, second and third components of this 3D vector. 
+    
     public String toString() 
     {
         return String.format("<%.6f, %.6f, %.6f>",this.getX(),this.getY(),this.getZ());
-    }
-    
-    
+    }  
 }
