@@ -1,9 +1,15 @@
 package vector3dapp;
 import java.util.Scanner;
 /**
- *
- * @author dhayde5
- */
+* @file Vector3DApp.java
+* @author Dustin Hayden
+* @date 03-09-2014
+* Description: Tests the Vector3D class
+* Course: CSC1350 Section 1
+* pawsID: dhayde5
+* Project #: 2
+* Instructor: Dr. Duncan
+*/
 public class Vector3dApp 
 {
     public static void main(String[] args) 
