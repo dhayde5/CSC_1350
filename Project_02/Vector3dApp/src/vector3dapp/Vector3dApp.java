@@ -36,49 +36,49 @@ public class Vector3dApp
         System.out.println("v2 = " + vector2.toString());
         
         // Print Vector 3
-        System.out.println("v3 = " + vector3.toString());
+        System.out.printf("v3 = %s\n\n", vector3.toString());
         
         // Compute and display v1 + v2
-        System.out.println("v1 + v2 = " + vector1.add(vector2).toString());
+        System.out.printf("v1 + v2 = %s\n\n", vector1.add(vector2).toString());
         
         // Compute and display (v2 + v3) * v1
-        System.out.printf("(v2 + v3) * v1 = %.6f\n",
+        System.out.printf("(v2 + v3) * v1 = %.6f\n\n",
                 vector1.iProduct(vector2.add(vector3)));
         
         // Compute and display v1 X (v2 - v3)
-        System.out.printf("v1 x (v2 - v3) = %s\n",
+        System.out.printf("v1 x (v2 - v3) = %s\n\n",
                 vector1.xProduct(vector2.subtract(vector3)).toString());
         
         // Compute and display (v2 - v3) X v1
-        System.out.printf("(v2 - v3) X v1 = %s\n",
+        System.out.printf("(v2 - v3) X v1 = %s\n\n",
                 vector2.subtract(vector3).xProduct(vector1).toString());
         
         // Compute and display |v1 X v2| and |v2| |v1|
-        System.out.printf("|v1 x v2| = %.6f and |v2||v1| = %.6f\n",
+        System.out.printf("|v1 x v2| = %.6f and |v2||v1| = %.6f\n\n",
                 vector1.xProduct(vector2).length(), 
                 vector2.length() * vector1.length()
                 );
         
         // Compute and display (v1 x v2) / (|v1 x v2|)
-        System.out.printf("(v1 x v2) / (|v1 x v2|) = %s\n",
+        System.out.printf("(v1 x v2) / (|v1 x v2|) = %s\n\n",
                 vector1.xProduct(vector2).multiply(1 / 
                         vector1.xProduct(vector2).length()).toString());
         
         // Compute and display v1 x (v2 + v3)
-        System.out.printf("v1 x (v2 + v3) = %s\n",
+        System.out.printf("v1 x (v2 + v3) = %s\n\n",
                 vector1.xProduct(vector2.add(vector3)).toString());
         
         // Compute and display (v1 x v2) + (v1 x v3)
-        System.out.printf("(v1 x v2) + (v1 x v3) = %s\n",
+        System.out.printf("(v1 x v2) + (v1 x v3) = %s\n\n",
                 vector1.xProduct(vector2).add(vector1.xProduct(vector3)).toString());
         
         // Test the norm method
         Vector3D v1Norm = vector1.norm();
-        System.out.printf("v1.norm() = %s\n", v1Norm);
+        System.out.printf("v1.norm() = %s\n\n", v1Norm);
         
         // Test the normalize method
         vector1.normalize();
-        System.out.printf("v1.normalize = <%.6f, %.6f, %.6f>\n", 
+        System.out.printf("v1.normalize = <%.6f, %.6f, %.6f>\n\n", 
                 vector1.getX(), vector1.getY(), vector1.getZ());
     }
     
