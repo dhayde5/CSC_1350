@@ -12,6 +12,9 @@ import java.util.Scanner;
 */
 public class Vector3dApp 
 {
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) 
     {
         // Create a scanner object
@@ -56,8 +59,7 @@ public class Vector3dApp
         // Compute and display |v1 X v2| and |v2| |v1|
         System.out.printf("|v1 x v2| = %.6f and |v2||v1| = %.6f\n\n",
                 vector1.xProduct(vector2).length(), 
-                vector2.length() * vector1.length()
-                );
+                vector2.length() * vector1.length());
         
         // Compute and display (v1 x v2) / (|v1 x v2|)
         System.out.printf("(v1 x v2) / (|v1 x v2|) = %s\n\n",
@@ -80,6 +82,5 @@ public class Vector3dApp
         vector1.normalize();
         System.out.printf("v1.normalize = <%.6f, %.6f, %.6f>\n\n", 
                 vector1.getX(), vector1.getY(), vector1.getZ());
-    }
-    
+    } 
 }

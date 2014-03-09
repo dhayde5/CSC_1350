@@ -11,6 +11,9 @@ package vector3dapp;
 * Instructor: Dr. Duncan
 */
 
+/**
+ * provides for a representation of a 3D vector and its methods.
+ */
 public class Vector3D 
 {
     /** 
