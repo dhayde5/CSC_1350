@@ -79,8 +79,8 @@ public class Vector3D
     // Multiplies this vector by a scalar (real number)
     public Vector3D multiply(double s)
     {
-        Vector3D sum = new Vector3D(this.getX() * s, this.getY() * s,this.getZ() * s);
-        return sum;
+        Vector3D product = new Vector3D(this.getX() * s, this.getY() * s, this.getZ() * s);
+        return product;
     }
     
     //  Computes the length of this vector.
@@ -90,7 +90,7 @@ public class Vector3D
                 Math.pow(this.getX(), 2) + 
                 Math.pow(this.getY(), 2) +
                 Math.pow(this.getZ(), 2));
-        return length();
+        return length;
     }
     
     // Computes the norm of this vector.
@@ -101,6 +101,16 @@ public class Vector3D
         norm.y = (y / length());
         norm.z = (z / length());
         return norm;
+    }
+    
+    // Normalizes this vector
+    public void normalize()
+    {
+        double normalizeLength = this.length();
+        
+        this.x = (this.x / normalizeLength);
+        this.y = (this.y / normalizeLength);
+        this.z = (this.z / normalizeLength);
     }
     
     //  Computes the difference of this vector and the specified 3D vector. 
