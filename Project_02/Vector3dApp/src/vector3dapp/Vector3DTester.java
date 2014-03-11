@@ -16,9 +16,6 @@ import java.util.Scanner;
  */
 public class Vector3DTester 
 {
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) 
     {
         // Create a scanner object
