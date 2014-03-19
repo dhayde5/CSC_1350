@@ -49,14 +49,14 @@ public class TriangleTester
         
         double perimeter = triangle.getLengthA() + triangle.getLengthB() + triangle.getLengthC();
         double halfPerimeter = perimeter / 2.0;
+        double area = Math.sqrt(halfPerimeter * 
+                         (halfPerimeter - triangle.getLengthA()) * 
+                         (halfPerimeter - triangle.getLengthB()) * 
+                         (halfPerimeter - triangle.getLengthC()));
         
         System.out.printf("Perimeter = %.5f\n", perimeter);
         
-        System.out.printf("Area      = %.5f\n", 
-                Math.sqrt(halfPerimeter * 
-                         (halfPerimeter - triangle.getLengthA()) * 
-                         (halfPerimeter - triangle.getLengthB()) * 
-                         (halfPerimeter - triangle.getLengthC())));
+        System.out.printf("Area      = %.5f\n", area);
         
         System.out.println("Classification:");
         
@@ -100,36 +100,31 @@ public class TriangleTester
             System.out.println("NO");
         }
         
+        System.out.println();
         System.out.print("Enter the new x- and y- coordinates of second vertex> ");
-        vertB_x = s.nextInt();
-        vertB_y = s.nextInt();
         
-        // TODO: Why is this necessary? Why doesn't it just flow back to the first vertB when I reassign
-        // vertB_X and vertB_y?
-        Point2D.Double vertB2 = new Point2D.Double(vertB_x, vertB_y);
-       
-        Triangle triangle2 = new Triangle(vertA, vertB2, vertC);
+        vertB.setLocation(s.nextInt(), s.nextInt());
+        
+        triangle.setTriangle(vertA, vertB, vertC);
         
         System.out.println();
-        System.out.println("After modifying the second vertex the triangle is " + triangle2 + ".");
+        System.out.println("After modifying the second vertex, the triangle is " + triangle + ".");
         
-        perimeter = triangle2.getLengthA() + triangle2.getLengthB() + triangle2.getLengthC();
-        
-        // TODO: Why is this necessary? Why doesn't it just flow through when I change perimeter?
+        perimeter = triangle.getLengthA() + triangle.getLengthB() + triangle.getLengthC();
         halfPerimeter = perimeter / 2.0;
+        area = Math.sqrt(halfPerimeter * 
+                         (halfPerimeter - triangle.getLengthA()) * 
+                         (halfPerimeter - triangle.getLengthB()) * 
+                         (halfPerimeter - triangle.getLengthC()));
         
         System.out.printf("Perimeter = %.5f\n", perimeter);
         
-        System.out.printf("Area      = %.5f\n", 
-                Math.sqrt(halfPerimeter * 
-                         (halfPerimeter - triangle2.getLengthA()) * 
-                         (halfPerimeter - triangle2.getLengthB()) * 
-                         (halfPerimeter - triangle2.getLengthC())));
+        System.out.printf("Area      = %.5f\n", area);
         
         System.out.println("Classification:");
         
         System.out.print("Right:       ");
-        if (triangle2.isRight()) 
+        if (triangle.isRight()) 
         {
             System.out.println("YES");
         }
@@ -139,7 +134,7 @@ public class TriangleTester
         }
         
         System.out.print("Isosceles:   ");
-        if (triangle2.isIsosceles())
+        if (triangle.isIsosceles())
         {
             System.out.println("YES");
         }
@@ -149,7 +144,7 @@ public class TriangleTester
         }
         
         System.out.print("Scalene:     ");
-        if (triangle2.isScalene())
+        if (triangle.isScalene())
         {
             System.out.println("YES");
         }
@@ -159,7 +154,7 @@ public class TriangleTester
         }
         
         System.out.print("Equilateral: ");
-        if (triangle2.isEquilateral())
+        if (triangle.isEquilateral())
         {
             System.out.println("YES");
         }

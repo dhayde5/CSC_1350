@@ -45,68 +45,68 @@ public class Triangle
     
      /**
      * Creates a triangle using the specific points.
-     * @param pnt1 The first point.
-     * @param pnt2 The second point.
-     * @param pnt3 The third point.
+     * @param point1 The first point.
+     * @param point2 The second point.
+     * @param point3 The third point.
      * @throws IllegalArgumentException when the specified points are collinear.
      */
-    public Triangle(Point2D.Double pnt1, Point2D.Double pnt2, Point2D.Double pnt3)
+    public Triangle(Point2D.Double point1, Point2D.Double point2, Point2D.Double point3)
     {
-        if (pnt1.equals(pnt2) || pnt1.equals(pnt3) || pnt2.equals(pnt3))
+        if (point1.equals(point2) || point1.equals(point3) || point2.equals(point3))
         {
             throw new IllegalArgumentException("Two or more vertices are collinear.");
         }
-        else if (pnt1.x == pnt2.x && pnt2.x == pnt3.x)
+        else if (point1.x == point2.x && point2.x == point3.x)
         {
             throw new IllegalArgumentException("Two or more vertices are collinear.");
         }
-        else if (pnt1.y == pnt2.y && pnt2.y == pnt3.y)
+        else if (point1.y == point2.y && point2.y == point3.y)
         {
             throw new IllegalArgumentException("Two or more vertices are collinear.");
         }
-        else if (pnt1.x != pnt2.x && pnt2.x != pnt3.x)
+        else if (point1.x != point2.x && point2.x != point3.x)
         {
-            if ((pnt1.y - pnt2.y) / (pnt1.x - pnt2.x) == (pnt2.y - pnt3.y) / (pnt2.x - pnt3.x))
+            if ((point1.y - point2.y) / (point1.x - point2.x) == (point2.y - point3.y) / (point2.x - point3.x))
             {
                 throw new IllegalArgumentException("Two or more vertices are collinear.");
             }
         }
-        vertexA = pnt1;
-        vertexB = pnt2;
-        vertexC = pnt3;
+        vertexA = point1;
+        vertexB = point2;
+        vertexC = point3;
     }
     
     /**
      * Changes the vertices of a triangle to the specified points.
-     * @param pnt1 The first new point.
-     * @param pnt2 The second new point.
-     * @param pnt3 The third new point.
+     * @param point1 The first new point.
+     * @param point2 The second new point.
+     * @param point3 The third new point.
      * @throws IllegalArgumentException when the specified points are collinear.
      */
-    public void setTriangle(Point2D.Double pnt1, Point2D.Double pnt2, Point2D.Double pnt3)
+    public void setTriangle(Point2D.Double point1, Point2D.Double point2, Point2D.Double point3)
     {
-        if (pnt1.equals(pnt2) || pnt1.equals(pnt3) || pnt2.equals(pnt3))
+        if (point1.equals(point2) || point1.equals(point3) || point2.equals(point3))
         {
             throw new IllegalArgumentException("Two or more vertices are collinear.");
         }
-        else if (pnt1.x == pnt2.x && pnt2.x == pnt3.x)
+        else if (point1.x == point2.x && point2.x == point3.x)
         {
             throw new IllegalArgumentException("Two or more vertices are collinear.");
         }
-        else if (pnt1.y == pnt2.y && pnt2.y == pnt3.y)
+        else if (point1.y == point2.y && point2.y == point3.y)
         {
             throw new IllegalArgumentException("Two or more vertices are collinear.");
         }
-        else if (pnt1.x != pnt2.x && pnt2.x != pnt3.x)
+        else if (point1.x != point2.x && point2.x != point3.x)
         {
-            if ((pnt1.y - pnt2.y) / (pnt1.x - pnt2.x) == (pnt2.y - pnt3.y) / (pnt2.x - pnt3.x))
+            if ((point1.y - point2.y) / (point1.x - point2.x) == (point2.y - point3.y) / (point2.x - point3.x))
             {
                 throw new IllegalArgumentException("Two or more vertices are collinear.");
             }
         }
-        vertexA = pnt1;
-        vertexB = pnt2;
-        vertexC = pnt3;
+        vertexA = point1;
+        vertexB = point2;
+        vertexC = point3;
     }
     
     /**
