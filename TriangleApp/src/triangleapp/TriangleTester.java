@@ -2,7 +2,7 @@
  * @file TriangleTester.java
  * @author Dustin Hayden
  * @date 03-19-2014
- * Description: 
+ * Description: Tests the Triangle class and its methods.
  * Course: CSC1350 Section 1
  * pawsID: dhayde5
  * Project #: 3
@@ -14,7 +14,7 @@ import java.awt.geom.Point2D;
 import java.util.Scanner;
 
 /**
- * Client program to test the Triangle class (see Triangle.java).
+ * Client program to test the Triangle class.
  */
 
 public class TriangleTester 
@@ -45,7 +45,7 @@ public class TriangleTester
         Triangle triangle = new Triangle(vertA, vertB, vertC);
         
         System.out.println();
-        System.out.println("The triangle you just created is " + triangle + ".");
+        System.out.println("The triangle that you just created is " + triangle + ".");
         
         double perimeter = triangle.getLengthA() + triangle.getLengthB() + triangle.getLengthC();
         double halfPerimeter = perimeter / 2.0;

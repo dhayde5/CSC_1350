@@ -2,7 +2,7 @@
  * @file Triangle.java
  * @author Dustin Hayden
  * @date 03-19-2014
- * Description: 
+ * Description: Creates user defined class Triangle and its methods.
  * Course: CSC1350 Section 1
  * pawsID: dhayde5
  * Project #: 3
@@ -12,10 +12,6 @@
 package triangleapp;
 import java.awt.geom.Point2D;
 
-/**
- *
- * @author dirty_000
- */
 public class Triangle 
 {
     /**
