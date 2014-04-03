@@ -29,7 +29,7 @@ public class AuxiliaryMath
     {
         if(m == 0 && n == 0)
         {
-             throw new IllegalArgumentException("GCD(" + m +"," + n +") is undefined.");
+             throw new IllegalArgumentException("GCD(" + m + "," + n + ") is undefined.");
         }
   
         if(n == 0)

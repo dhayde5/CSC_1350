@@ -22,7 +22,7 @@ public class AuxiliaryMathTester
         {
             System.out.println(" BASIC MATHEMATICS APPLICATION");
             System.out.println("===============================");
-            System.out.println("Greatest Common Divisior....[1]"); 
+            System.out.println("Greatest Common Divisor.....[1]"); 
             System.out.println("Least Common Multiple.......[2]"); 
             System.out.println("Factorial...................[3]"); 
             System.out.println("Fibonacci Number............[4]"); 
